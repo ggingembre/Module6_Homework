@@ -79,5 +79,12 @@ public final class UserUtils {
             }
         }
         return users;
+
+        //for (User user : users){
+        //    if (user == null){
+        //        users = delete(users,i);
+        //    }
+        //}
+
     }
 }

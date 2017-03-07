@@ -21,6 +21,28 @@ public final class User { // class is immutable, so made it final
         this.balance = balance;
     }
 
+    // override print and equals methods
+
+    @Override
+    public String toString() {
+        return "User id: " + id + "\nFirst name: " + firstName + "\nLast name: " + lastName + "\nSalary: " +
+                salary + "\nBalance: " + balance + "\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+
+        User user = (User) o;
+
+        if (id != user.id) return false;
+        if (salary != user.salary) return false;
+        if (balance != user.balance) return false;
+        if (!firstName.equals(user.firstName)) return false;
+        return lastName.equals(user.lastName);
+    }
+
     // get and set methods
 
     // class immutable, so no set methods
